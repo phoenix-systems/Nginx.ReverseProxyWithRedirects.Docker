@@ -2,19 +2,19 @@ server {
     listen 80;
     
     location ${REDIRECT_1_PATH} {
-        rewrite ^{REDIRECT_1_PATH}$ {REDIRECT_1_TARGET_URL} permanent;
+        rewrite ^${REDIRECT_1_PATH}$ ${REDIRECT_1_TARGET_URL} permanent;
     }
     location ${REDIRECT_2_PATH} {
-        rewrite ^{REDIRECT_2_PATH}$ {REDIRECT_2_TARGET_URL} permanent;
+        rewrite ^${REDIRECT_2_PATH}$ ${REDIRECT_2_TARGET_URL} permanent;
     }
     location ${REDIRECT_3_PATH} {
-        rewrite ^{REDIRECT_3_PATH}$ {REDIRECT_3_TARGET_URL} permanent;
+        rewrite ^${REDIRECT_3_PATH}$ ${REDIRECT_3_TARGET_URL} permanent;
     }
     location ${REDIRECT_4_PATH} {
-        rewrite ^{REDIRECT_4_PATH}$ {REDIRECT_4_TARGET_URL} permanent;
+        rewrite ^${REDIRECT_4_PATH}$ ${REDIRECT_4_TARGET_URL} permanent;
     }
     location ${REDIRECT_5_PATH} {
-        rewrite ^{REDIRECT_5_PATH}$ {REDIRECT_5_TARGET_URL} permanent;
+        rewrite ^${REDIRECT_5_PATH}$ ${REDIRECT_5_TARGET_URL} permanent;
     }
    
     location ${PROXY_1_PATH} {
