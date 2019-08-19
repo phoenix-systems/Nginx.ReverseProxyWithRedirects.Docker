@@ -28,8 +28,10 @@ services:
     environment:
       - "REDIRECT_1_PATH=/path1"
       - "REDIRECT_1_TARGET_URL=http://dummy.com/path1"
-      - "PROXY_1_PATH=/path2"
-      - "PROXY_1_TARGET_URL=http://internal.local/path2"
+      - "REDIRECT_1_PATH=/path2"
+      - "REDIRECT_1_TARGET_URL=http://dummy2.com"
+      - "PROXY_1_PATH=/path3"
+      - "PROXY_1_TARGET_URL=http://internal.local/path3"
     labels:
       - "traefik.docker.network=web"
       - "traefik.enable=true"
@@ -40,7 +42,11 @@ networks:
   web:
     external: true
 ```
-It will redirect https://example.com/path1 -> http://dummy.com/path1 and proxy https://example.com/path2 -> http://internal.local/path2.
+It will redirect:
+- https://example.com/path1 -> http://dummy.com/path1 
+- https://example.com/path2 -> http://dummy2.com
+proxy:
+- https://example.com/path3 -> http://internal.local/path3
 
 ## Build docker image
 Pull code from repository and run the following command:
