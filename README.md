@@ -45,6 +45,7 @@ networks:
 It will redirect:
 - https://example.com/path1 -> http://dummy.com/path1 
 - https://example.com/path2 -> http://dummy2.com
+
 proxy:
 - https://example.com/path3 -> http://internal.local/path3
 
