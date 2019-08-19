@@ -28,8 +28,8 @@ services:
     environment:
       - "REDIRECT_1_PATH=/path1"
       - "REDIRECT_1_TARGET_URL=http://dummy.com/path1"
-      - "REDIRECT_1_PATH=/path2"
-      - "REDIRECT_1_TARGET_URL=http://dummy2.com"
+      - "REDIRECT_2_PATH=/path2"
+      - "REDIRECT_2_TARGET_URL=http://dummy2.com"
       - "PROXY_1_PATH=/path3"
       - "PROXY_1_TARGET_URL=http://internal.local/path3"
     labels:
