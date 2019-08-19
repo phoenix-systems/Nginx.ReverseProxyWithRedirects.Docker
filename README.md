@@ -40,6 +40,7 @@ networks:
   web:
     external: true
 ```
+It will redirect https://example.com/path1 -> http://dummy.com/path1 and proxy https://example.com/path2 -> http://internal.local/path2.
 
 ## Build docker image
 Pull code from repository and run the following command:
