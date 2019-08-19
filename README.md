@@ -29,7 +29,7 @@ services:
       - "REDIRECT_1_PATH=/path1"
       - "REDIRECT_1_TARGET_URL=http://dummy.com/path1"
       - "PROXY_1_PATH=/path2"
-      - "REDIRECT_1_TARGET_URL=http://internal.local/path2"
+      - "PROXY_1_TARGET_URL=http://internal.local/path2"
     labels:
       - "traefik.docker.network=web"
       - "traefik.enable=true"
