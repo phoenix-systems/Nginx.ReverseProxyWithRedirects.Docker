@@ -1,6 +1,9 @@
+events {
+    worker_connections 20000;
+}
+
 server {
     listen 80;
-    worker_connections 20000;
 
     location ${REDIRECT_1_PATH} {
         rewrite ^${REDIRECT_1_PATH}$ ${REDIRECT_1_TARGET_URL} permanent;
