@@ -19,7 +19,7 @@ server {
    
     location ${PROXY_1_PATH} {
         proxy_pass ${PROXY_1_TARGET_URL};
-        #proxy_set_header        Host               testwebsite.skycell.ch;
+        proxy_set_header        Host               cms.hi1.ch;
         proxy_set_header        X-Real-IP          ${remote_addr};
         #proxy_set_header        X-Forwarded-For    ${proxy_add_x_forwarded_for};
         proxy_set_header        X-Forwarded-Host   testwebsite.skycell.ch:443;
