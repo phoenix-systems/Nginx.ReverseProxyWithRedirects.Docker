@@ -1,6 +1,6 @@
 FROM nginx:1.17.3
 
-ENV host="\$host"
+ENV host="\$http_host"
 ENV remote_addr="\$remote_addr"
 ENV proxy_add_x_forwarded_for="\$proxy_add_x_forwarded_for"
 
