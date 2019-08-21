@@ -1,8 +1,8 @@
 FROM nginx:1.17.3
 
-ENV HOST="$host"
-ENV remote_addr="$remote_addr"
-ENV proxy_add_x_forwarded_for="$proxy_add_x_forwarded_for"
+ENV host="\$host"
+ENV remote_addr="\$remote_addr"
+ENV proxy_add_x_forwarded_for="\$proxy_add_x_forwarded_for"
 
 ENV REDIRECT_1_PATH="/REDIRECT_1_PATH_NOT_EXIST_XXX"
 ENV REDIRECT_1_TARGET_URL="http://google.com/REDIRECT_1_TARGET_URL_NOT_EXIST_XXX"
