@@ -19,6 +19,13 @@ server {
    
     location ${PROXY_1_PATH} {
         proxy_pass ${PROXY_1_TARGET_URL};
+        proxy_set_header        Host               testwebsite.skycell.ch;
+        #proxy_set_header        X-Real-IP          ${remote_addr};
+        #proxy_set_header        X-Forwarded-For    ${proxy_add_x_forwarded_for};
+        proxy_set_header        X-Forwarded-Host   testwebsite.skycell.ch:443;
+        proxy_set_header        X-Forwarded-Server testwebsite.skycell.ch;
+        proxy_set_header        X-Forwarded-Port   443;
+        proxy_set_header        X-Forwarded-Proto  https;        
     }
     location ${PROXY_2_PATH} {
         proxy_pass ${PROXY_2_TARGET_URL};
@@ -32,12 +39,4 @@ server {
     location ${PROXY_5_PATH} {
         proxy_pass ${PROXY_5_TARGET_URL};
     }
-    
-    proxy_set_header        Host               testwebsite.skycell.ch;
-    proxy_set_header        X-Real-IP          ${remote_addr};
-    proxy_set_header        X-Forwarded-For    ${proxy_add_x_forwarded_for};
-    proxy_set_header        X-Forwarded-Host   testwebsite.skycell.ch:443;
-    proxy_set_header        X-Forwarded-Server testwebsite.skycell.ch;
-    proxy_set_header        X-Forwarded-Port   443;
-    proxy_set_header        X-Forwarded-Proto  https;
 }
